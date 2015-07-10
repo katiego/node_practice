@@ -69,12 +69,13 @@ app.delete('/users/:id', function(req, res) {
   
   // set the value of the id
 var userID = parseInt(req.params.id); 
-  // find item in `users` array matching the id
+  // find item in `users
+// ` array matching the id
 var targetUser = _.findWhere(users, {id:userID}); 
   // get the index of the found item
-var userIndex = users.indexOf(targetUser);  
+var userIndex = user.indexOf(targetUser);  
   // remove the item at that index, only remove 1 item
-users.splice(userIndex, 1);  
+user.splice(userIndex, 1);  
   // send back deleted object
 res.json(targetUser);
 });
